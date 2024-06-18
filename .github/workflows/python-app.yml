@@ -26,10 +26,10 @@ jobs:
         echo "Current directory: $(pwd)"
         echo "Home directory: $HOME"
 
-    - name: Install Flask
+    - name: Install dependencies
       run: |
-        echo "Installing Flask"
-        pip install Flask
+        echo "Installing dependencies"
+        pip install Flask pandas
 
     - name: Run the application
       run: |
