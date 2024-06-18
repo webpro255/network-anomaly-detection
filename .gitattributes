@@ -4,3 +4,4 @@ kddcup.data_10_percent filter=lfs diff=lfs merge=lfs -text
 .local/lib/python3.10/site-packages/clang/native/libclang.so filter=lfs diff=lfs merge=lfs -text
 .local/lib/python3.10/site-packages/tensorflow/libtensorflow_framework.so.2 filter=lfs diff=lfs merge=lfs -text
 .local/lib/python3.10/site-packages/tensorflow/libtensorflow_cc.so.2 filter=lfs diff=lfs merge=lfs -text
+.cache/pip/http/8/a/4/0/e/8a40e6bcebbf40fc9e45f26922d52db36e40e3ff0310c05d5e867128 filter=lfs diff=lfs merge=lfs -text
