@@ -21,8 +21,15 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        echo "Installing dependencies"
+        pip install -r requirements.txt || { echo "Failed to install dependencies"; exit 1; }
 
     - name: List files for debugging
       run: |
+        echo "Listing files"
         ls -R
+
+    - name: Run the application
+      run: |
+        echo "Running the application"
+        python app.py || { echo "Application run failed"; exit 1; }
