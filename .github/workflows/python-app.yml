@@ -19,15 +19,22 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: List files for debugging
+      run: |
+        echo "Listing all files"
+        ls -R
+        echo "Current directory: $(pwd)"
+        echo "Home directory: $HOME"
+
     - name: Install dependencies
       run: |
         echo "Installing dependencies"
-        pip install -r requirements.txt || { echo "Failed to install dependencies"; exit 1; }
-
-    - name: List files for debugging
-      run: |
-        echo "Listing files"
-        ls -R
+        if [ -f "requirements.txt" ]; then
+          pip install -r requirements.txt || { echo "Failed to install dependencies"; exit 1; }
+        else
+          echo "requirements.txt not found"
+          exit 1
+        fi
 
     - name: Run the application
       run: |
