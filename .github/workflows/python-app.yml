@@ -34,4 +34,8 @@ jobs:
     - name: Run the application
       run: |
         echo "Running the application"
-        python app.py || { echo "Application run failed"; exit 1; }
+        nohup python app.py &
+        sleep 10
+        curl http://127.0.0.1:5000
+        pkill -f "python app.py"
+
