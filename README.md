@@ -1,4 +1,11 @@
+
 # Network Anomaly Detection
+![Python version](https://img.shields.io/badge/python-3.10+-blue)
+![GitHub Actions](https://github.com/webpro255/network-anomaly-detection/actions/workflows/main.yml/badge.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/webpro255/network-anomaly-detection)
+![GitHub issues](https://img.shields.io/github/issues/webpro255/network-anomaly-detection)
+![GitHub](https://img.shields.io/github/license/webpro255/network-anomaly-detection)
+![GitHub contributors](https://img.shields.io/github/contributors/webpro255/network-anomaly-detection)
 
 ## Overview
 
