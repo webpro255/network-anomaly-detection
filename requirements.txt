@@ -1,0 +1,15 @@
+Flask==3.0.3
+pandas==2.2.2
+scikit-learn==1.5.0
+joblib==1.4.2
+blinker==1.8.2
+click==8.1.7
+itsdangerous==2.2.0
+Jinja2==3.1.4
+numpy==2.0.0
+python-dateutil==2.9.0.post0
+pytz==2024.1
+scipy==1.13.1
+threadpoolctl==3.5.0
+tzdata==2024.1
+Werkzeug==3.0.3
