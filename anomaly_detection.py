@@ -7,7 +7,7 @@ pipeline = joblib.load('pipeline.pkl')
 def detect_anomalies(data):
     try:
         df = pd.DataFrame(data)
-        
+
         # Preprocess data
         categorical_columns = ['column2', 'column3']  # Update with actual categorical columns
         numeric_columns = ['column1']  # Update with actual numeric columns
@@ -17,7 +17,7 @@ def detect_anomalies(data):
 
         preprocessed_data = pipeline.named_steps['preprocessor'].transform(df)
         predictions = pipeline.named_steps['classifier'].predict(preprocessed_data)
-        
+
         return predictions
     except Exception as e:
         raise ValueError(f"Error during preprocessing or prediction: {e}")
@@ -30,3 +30,4 @@ if __name__ == '__main__':
         print("Predictions:", result)
     except ValueError as e:
         print(e)
+
