@@ -2,16 +2,19 @@ name: Python application
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Python
@@ -19,23 +22,17 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: List files for debugging
-      run: |
-        echo "Listing all files"
-        ls -R
-        echo "Current directory: $(pwd)"
-        echo "Home directory: $HOME"
-
     - name: Install dependencies
       run: |
-        echo "Installing dependencies"
-        pip install Flask pandas joblib scikit-learn
+        python -m pip install --upgrade pip
+        pip install flask pandas scikit-learn joblib
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Run tests
+      run: |
+        # If you have tests, you can run them here
+        # For example, if you use pytest:
+        # pytest
 
     - name: Run the application
-      run: |
-        echo "Running the application"
-        nohup python app.py &
-        sleep 10
-        curl http://127.0.0.1:5000
-        pkill -f "python app.py"
-
+      run: python3 app.py
