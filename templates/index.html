@@ -1,16 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Anomaly Detection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Anomaly Detection</title>
 </head>
 <body>
-    <h1>Welcome to Anomaly Detection</h1>
-    <form action="/predict" method="post">
-        <label for="data">Enter data:</label><br>
-        <textarea id="data" name="data" rows="4" cols="50"></textarea><br>
-        <input type="submit" value="Submit">
+    <h1>Network Anomaly Detection</h1>
+    <form id="predictionForm">
+        <label for="data">Enter Data:</label>
+        <textarea id="data" name="data" rows="10" cols="50"></textarea><br>
+        <button type="submit">Predict</button>
     </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const dataInput = document.getElementById('data').value;
+            let jsonData;
+            try {
+                jsonData = JSON.parse(dataInput);
+            } catch (e) {
+                document.getElementById('result').innerText = 'Invalid JSON format';
+                return;
+            }
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerText = JSON.stringify(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = 'An error occurred';
+            });
+        });
+    </script>
 </body>
 </html>
