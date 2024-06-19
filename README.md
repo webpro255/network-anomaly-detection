@@ -44,19 +44,13 @@ Ensure you have Python 3.10+ installed, then install the necessary Python packag
 ```sh
 pip install -r requirements.txt
 ```
-### 3. Train the Model
-
-Run the training script to train the anomaly detection model:
-```sh
-python train_model.py
-```
-### 4. Run the Flask Application
+### 3. Run the Flask Application
 
 Start the Flask application to serve the REST API:
 ```sh
-python app.py
+python3 app.py
 ```
-### 5. Test the Application
+### 4. Test the Application
 
 Use the following curl command to test the API with sample data:
 ```sh
@@ -81,10 +75,11 @@ Accepts JSON data representing network traffic and returns a prediction of anoma
 ```
 ### Project Structure
 - **app.py**: The main Flask application file.
-- **train_model.py**: Script to train the anomaly detection model.
+- **anomaly_detection.py**: Contains the anomaly detection logic.
 - **requirements.txt**: Python dependencies.
-- **network_traffic.csv**: Sample network traffic data (for training and testing).
+- **kddcup.data_10_percent**: Sample network traffic data (for training and testing).
 - **pipeline.pkl**: Serialized machine learning model.
+- **templates**: HTML templates for the web interface.
 
 ### Future Improvements
 - **Integration with Real-time Traffic Capture**: Use Wireshark or tcpdump for real-time traffic capture.
