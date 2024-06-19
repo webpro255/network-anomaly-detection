@@ -3,7 +3,7 @@
 ![GitHub Actions](https://github.com/webpro255/network-anomaly-detection/actions/workflows/python-app.yml/badge.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/webpro255/network-anomaly-detection)
 ![GitHub issues](https://img.shields.io/github/issues/webpro255/network-anomaly-detection)
-![GitHub](https://img.shields.io/github/license/webpro255/network-anomaly-detection/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/webpro255/network-anomaly-detection/blob/main/LICENSE)
 ![GitHub contributors](https://img.shields.io/github/contributors/webpro255/network-anomaly-detection)
 
 Welcome to the Network Anomaly Detection project! This repository showcases a practical application of machine learning in cybersecurity by monitoring and detecting unusual activities in a home network. 
