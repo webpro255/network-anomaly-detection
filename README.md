@@ -6,7 +6,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/webpro255/network-anomaly-detection/blob/main/LICENSE)
 ![GitHub contributors](https://img.shields.io/github/contributors/webpro255/network-anomaly-detection)
 
-Welcome to the Network Anomaly Detection project! This repository showcases a practical application of machine learning in cybersecurity by monitoring and detecting unusual activities in a home network. 
+Welcome to the Network Anomaly Detection project! This repository showcases a practical application of machine learning in cybersecurity by monitoring and detecting unusual activities in a network. 
 
 ## Features
 - **Real-time Anomaly Detection**: Monitors network traffic and identifies anomalies in real-time using machine learning.
